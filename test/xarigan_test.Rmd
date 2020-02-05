@@ -5,9 +5,24 @@ date: "2/5/2020"
 output: xaringan::moon_reader
 ---
 
-# Plumber APIs  
+# Plumber
+Plumber is an R package that makes it easy to transform your R functions into a REST API.
 
-> My name is Hadrien and I work on the customer success team at RStudio
+---
+# APIs
+
+- Stands for **Application Programming Interface**
+- APIs are used to **transfer information** between applications/programs
+- HTTP APIs have become the **predominant language** by which software communicates
+
+![National Weather Service](images/weather_service.png)
+
+???
+"APIs are how weather forecast data is shared from a reputable source like the National Weather Service to hundreds of software apps that specialize in its presentation." Brenda Jin
+
+---
+# APIs in Insurance
+
 
 ---
 class: center, middle
