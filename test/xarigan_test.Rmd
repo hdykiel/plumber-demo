@@ -1,0 +1,25 @@
+---
+title: "Plumber APIs"
+author: "Hadrien@rstudio.com"
+date: "2/5/2020"
+output: xaringan::moon_reader
+---
+
+# Plumber APIs  
+
+> My name is Hadrien and I work on the customer success team at RStudio
+
+---
+class: center, middle
+
+# Next slide  
+
+Xarigan can align slides
+
+---
+background-image: url(https://www.akamai.com/uk/en/multimedia/images/video/akamai-api-video-thumbnail.jpg?imwidth=1366)
+background-size: cover
+
+---
+# Learn Xarigan  
+Slides from Alison's rstudio::conf 2019 workshop on Xarigan: https://arm.rbind.io/slides/xaringan.html#86
