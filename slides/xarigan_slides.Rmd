@@ -1,12 +1,14 @@
 ---
 title: "Plumber APIs"
-author: "Hadrien@rstudio.com"
+author: "Hadrien Dykiel & James Blair"
 date: "2/5/2020"
 output: xaringan::moon_reader
 ---
 
-# Plumber
-Plumber is an R package that makes it easy to transform your R functions into a REST API.
+# Plumber Package
+Convert your R code into a REST API!  
+
+![](images/plumber.png)
 
 ---
 # APIs
@@ -20,20 +22,47 @@ Plumber is an R package that makes it easy to transform your R functions into a 
 ???
 "APIs are how weather forecast data is shared from a reputable source like the National Weather Service to hundreds of software apps that specialize in its presentation." Brenda Jin
 
----
-# APIs in Insurance
 
 
 ---
-class: center, middle
+# APIs provide a common interface other software can interact with
 
-# Next slide  
+![](images/rest_api.png)
+???
+APIs give these systems a common language via a common interface
+"IT org not set up to incorporate R models" - common challenge
 
-Xarigan can align slides
 
 ---
-background-image: url(https://www.akamai.com/uk/en/multimedia/images/video/akamai-api-video-thumbnail.jpg?imwidth=1366)
-background-size: cover
+# The Atanomy of a REST API  
+[insert some basic info on request methods, parameters, response types, etc.]
+
+---
+# Insurance data science teams are starting build a lot more APIs (with R)!
+Some examples of what they are building include:
+
+- APIs for 3rd parties like brokers & partners
+- APIs to deploy models
+  - Fraud detection models
+  - Pricing models
+
+???
+"APIs can help make it easy for partners to do business with you. Providing APIs to an ecosystem of related services partners is an approach that is well-suited for generating new revenue streams." - [IBM Whitepaper\: Identifying API use cases\:
+Property and casualty insurance](https://www.ibm.com/downloads/cas/XNMBM5BL)
+
+---
+# Plumber makes it easier, faster, and cheaper  
+
+![](images/before_now.png)
+
+---
+# Demo time!  
+How to create your own API:
+  1. write an R function
+  2. install plumber
+  3. add special comments
+  4. test it
+  5. deploy it
 
 ---
 # Learn Xarigan  
