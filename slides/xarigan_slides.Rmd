@@ -34,8 +34,46 @@ APIs give these systems a common language via a common interface
 
 
 ---
-# The Atanomy of a REST API  
-[insert some basic info on request methods, parameters, response types, etc.]
+# You call APIs by making "requests"  
+
+.right-column[
+**Requests are made up of:**
+- a start line (mandatory)  
+  - HTTP version (e.g. HTTP/1.1)
+  - Method (e.g. GET, POST, PUT, DELETE)
+  - API folder path
+  - parameters
+- headers (optional)
+  - host name
+  - token
+- body (optional)
+
+**How to make API calls in R:**  
+`httr::GET(url, query = <list of query parameters>, ...)`
+]
+
+.left-column[
+![](images/request.png)
+]
+
+???
+GET http://www.w3.org/pub/WWW/TheProject.html HTTP/1.1
+
+https:://api-endpoint.org/api/rest_v1/resource_name?query1=value1&query2=value2
+
+---
+# ... and the API responds with a "response"  
+
+.left-column[
+![](images/response.png)
+]
+
+
+.right-column[
+API responses will most often be JSON or XML, standard formats for transferring information over the web.  
+
+R, like other programming languages, has some great tooling for working with these standard data types.(e.g. `jsonlite::fromJSON(content(response, as = "text")))`
+]
 
 ---
 # Insurance data science teams are starting build a lot more APIs (with R)!
@@ -57,13 +95,13 @@ Property and casualty insurance](https://www.ibm.com/downloads/cas/XNMBM5BL)
 
 ---
 # Demo time!  
-How to create your own API:
+Follow these 5 steps to create your first Plumber API:
   1. write an R function
   2. install plumber
   3. add special comments
-  4. test it
+  4. test it / try it out
   5. deploy it
 
 ---
-# Learn Xarigan  
-Slides from Alison's rstudio::conf 2019 workshop on Xarigan: https://arm.rbind.io/slides/xaringan.html#86
+# Appendix    
+- These slides were created with `rmarkdown` and `xaringan`. To learn more about the `xaringan` package, check out Alision's slides from her rstudio::conf 2019 workshop https://arm.rbind.io/slides/xaringan.html
