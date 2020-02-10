@@ -89,6 +89,14 @@ Some examples of what they are building include:
 Property and casualty insurance](https://www.ibm.com/downloads/cas/XNMBM5BL)
 
 ---
+# Lemonade Insurance API Example  
+![](images/lemonade_api.png)
+
+---
+# Zillow Insurance API Example  
+![](images/zillow_api.png)
+
+---
 # Plumber makes it easier, faster, and cheaper  
 
 ![](images/before_now.png)
@@ -101,6 +109,12 @@ Follow these 5 steps to create your first Plumber API:
   3. add special comments
   4. test it / try it out
   5. deploy it
+
+---
+# Plumber docs, examples, and videos  
+- Slides & example scripts from today's screenshare: https://github.com/hdykiel/plumber-demo
+- Plumber website: https://www.rplumber.io/
+- James' [rstudio::conf 2019 Plumber talk](https://resources.rstudio.com/rstudio-conf-2019/democratizing-r-with-plumber-apis) (2020 presentation available soon!)
 
 ---
 # Appendix    
