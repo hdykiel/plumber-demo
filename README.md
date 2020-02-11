@@ -23,4 +23,4 @@ renv::restore()
 
 ## RStudio.cloud
 A copy of this project is available on
-[RStudio.cloud](https://rstudio.cloud/project/931639){target="_blank"}.
+[RStudio.cloud](https://rstudio.cloud/project/931639).
