@@ -354,10 +354,10 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "0.9.2",
+      "Version": "0.9.3",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "5181d5f316c7a6589219866d640e004c"
+      "Hash": "c1a367437d8a8a44bec4b9d4974cb20c"
     },
     "reshape2": {
       "Package": "reshape2",
@@ -379,6 +379,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "9d1c61d476c448350c482d6664e1b28b"
+    },
+    "rstudioapi": {
+      "Package": "rstudioapi",
+      "Version": "0.11",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "33a5b27a03da82ac4b1d43268f80088a"
     },
     "scales": {
       "Package": "scales",

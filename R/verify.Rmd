@@ -35,6 +35,10 @@ API and investigate responses.
 base_url <- "http://localhost:5762"
 ```
 
+```{r}
+swagger_url <- paste0(rstudioapi::translateLocalUrl(base_url, absolute = TRUE), "/__swagger__/")
+rstudioapi::viewer(swagger_url)
+```
 
 ### echo
 Send request
