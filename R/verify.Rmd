@@ -1,0 +1,120 @@
+---
+title: "Test API"
+output: html_notebook
+---
+
+```{r setup}
+# Packages ----
+library(httr)
+library(callr)
+library(magrittr)
+```
+
+This notebook contains some simple ad-hoc tests and checks for verifying a
+Plumber API.
+
+## Start API
+In order to test the API, it needs to be running. We can either start the API as
+a background job within RStudio, or we can use the
+[`callr`](https://callr.r-lib.org/) package to start a background API:
+```{r}
+plumber_api <- r_bg(function() {
+  plumber::plumb(dir = ".")$run(swagger = TRUE, port = 5762)
+})
+```
+
+```{r}
+plumber_api$is_alive()
+```
+
+## Check API
+Using the [`httr`](https://httr.r-lib.org/) package, we can send requests to the
+API and investigate responses.
+
+```{r}
+base_url <- "http://localhost:5762"
+```
+
+```{r}
+swagger_url <- paste0(rstudioapi::translateLocalUrl(base_url, absolute = TRUE), "/__swagger__/")
+rstudioapi::viewer(swagger_url)
+```
+
+### echo
+Send request
+```{r}
+r <- GET(base_url, path = "echo", query = list(msg = "Hi there!"))
+```
+
+Check status code
+```{r}
+status_code(r)
+```
+
+Check contents
+```{r}
+content(r, as = "text", encoding = "UTF-8") %>% 
+  jqr::jq() %T>%
+  print() %>% 
+  jsonlite::fromJSON()
+```
+
+### simple-plot
+Send request
+```{r}
+r <- GET(base_url, path = "simple-plot")
+```
+
+Check status code
+```{r}
+status_code(r)
+```
+
+Check contents
+```{r}
+content(r, as = "raw") %>% 
+  magick::image_read()
+```
+
+### plot
+Send request
+```{r}
+r <- POST(base_url, 
+          path = "plot",
+          body = upload_file("../data/diamonds.json"),
+          query = list(facet = "cut"))
+```
+
+Check status code
+```{r}
+status_code(r)
+```
+
+Check contents
+```{r}
+content(r, as = "raw") %>% 
+  magick::image_read()
+```
+
+### sum
+Send request
+```{r}
+r <- GET(base_url, path = "sum", query = list(x = 19, y = 7))
+```
+
+Check status code
+```{r}
+status_code(r)
+```
+
+Check contents
+```{r}
+content(r, as = "text", encoding = "UTF-8") %>% 
+  jsonlite::fromJSON()
+```
+
+## Kill API
+
+```{r}
+plumber_api$kill()
+```
